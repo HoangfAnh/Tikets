@@ -8,6 +8,51 @@ h4{
     line-height: 28px;
 }
 
+
+.container1{
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    display: block;
+  }
+  .loader1{
+    width: 100px;
+    height: 100px;
+    position: relative;
+  }
+  .loader1::before,
+  .loader1::after {
+    content: '';
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+    animation: rotate 1s infinite cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  .loader1::before {
+    background-color: #fc3f9e;
+  }
+  .loader1::after {
+    background-color: #50e8f3;
+    animation-delay: .5s;
+  }
+  @keyframes rotate {
+    0%,
+    100% {
+      left: 95px;
+    }
+    25% {
+      transform: scale(.3);
+    }
+    50% {
+      left: 0;
+    }
+    75% {
+      transform: scale(1);
+    }
+  }
+
 .LocVe {
     display: flex;
 }
@@ -92,7 +137,7 @@ h4{
     align-items: flex-start;
 }
 
-input[type="radio"] {
+.TinhTrangDoiSoat-item input[type="radio"] {
     width: 30px;
     height: 30px;
     margin-right: 20px;
@@ -139,10 +184,15 @@ input[type="radio"] {
 }
 
 /* table */
-table.table-doisoatve td, th {
-    padding: 10px 5px;
+table.table-doisoatve th {
+    padding: 15px 20px;
+    font-weight: 500;
   }
   
+table.table-doisoatve td {
+    padding: 20px 20px;
+  }
+
 table.table-doisoatve {
     margin-bottom: 20px;
     width: 100%;
@@ -157,4 +207,13 @@ table.table-doisoatve thead tr:nth-child(2n + 1) {
   }
 table.table-doisoatve tbody tr:nth-child(2n + 2) {
     background: #F1F4F8;
+  }
+
+  .CheckVe-active1{
+    color: #A5A8B1;
+    font-weight: 500;
+  }
+  .CheckVe-active2{
+    color: #FD5959;
+    font-weight: 500;
   }

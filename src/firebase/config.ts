@@ -3,14 +3,13 @@ import 'firebase/auth';
 import 'firebase/compat/firestore';
 
 const config = {
-  apiKey: "AIzaSyCfJYB6yB4bYqoZosQhKu0BfK1GKDm9tNg",
-  authDomain: "typescript-d56bc.firebaseapp.com",
-  databaseURL: "https://typescript-d56bc-default-rtdb.firebaseio.com",
-  projectId: "typescript-d56bc",
-  storageBucket: "typescript-d56bc.appspot.com",
-  messagingSenderId: "11413491329",
-  appId: "1:11413491329:web:2bf99dca9f86e1477b0780",
-  measurementId: "G-K8L6H0TYVH"
+  apiKey: "AIzaSyAjXR4WvjZ-QqMQGnnBG_ut4jtrdWSUhIA",
+  authDomain: "tikets-5d20e.firebaseapp.com",
+  projectId: "tikets-5d20e",
+  storageBucket: "tikets-5d20e.appspot.com",
+  messagingSenderId: "633790415305",
+  appId: "1:633790415305:web:73692361598b3f524e6818",
+  measurementId: "G-0FN8JHDL7H"
 };
 firebase.initializeApp(config);
 export default firebase.firestore();

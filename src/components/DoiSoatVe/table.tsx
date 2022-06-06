@@ -9,8 +9,10 @@ function TableDoiSoat(){
         fetchTodos();
       }, []);
       const fetchTodos = async () => {
+        // clean the todos
         setTodos([]);
         const _todos = await todo.all();
+        // set state
         setTodos(_todos);
         const checkVe = document.getElementsByClassName('CheckVe');
         for ( let i = 0; i < checkVe.length; i++) {

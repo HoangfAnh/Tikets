@@ -5,19 +5,19 @@ export const BangTrangChu = () => {
     const data = [
         {
             "timePeriod": "Thứ 2",
-            "value": 0.75
+            "value": 1
         },
         {
             "timePeriod": "Thứ 3",
-            "value": 2
+            "value": 1.4
         },
         {
             "timePeriod": "Thứ 4",
-            "value": 1.75
+            "value": 2
         },
         {
             "timePeriod": "Thứ 5",
-            "value": 2.5
+            "value": 2.27
         },
         {
             "timePeriod": "Thứ 6",
@@ -25,11 +25,13 @@ export const BangTrangChu = () => {
         },
         {
             "timePeriod": "Thứ 7",
-            "value": 3
-        },        {
-            "timePeriod": "Chủ Nhật",
-            "value": 3.5
+            "value": 2.4
         },
+        {
+            "timePeriod": "CN",
+            "value": 1.5
+        },
+    
     ];
 
     const config = {

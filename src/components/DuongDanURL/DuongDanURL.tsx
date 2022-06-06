@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import {Routes, Route} from 'react-router-dom'
-import DanhSachVe from "../DanhSachVe/DanhSachVe";
+import QuanLyVe from "../DanhSachVe/DanhSachVe";
 import TrangChu from "../TrangChu/TrangChu";
 import DanhSachGoiVe from "../DanhSachGoiVe/DanhSachGoiVe";
 import DoiSoatVe from "../DoiSoatVe/DoiSoatVe"
@@ -14,7 +14,7 @@ function DuongDanURL(){
    return(
     <Routes>
         <Route path="/" element={<TrangChu/>} />
-        <Route path="/DanhSachVe" element={<DanhSachVe/>} />
+        <Route path="/DanhSachVe" element={<QuanLyVe/>} />
         <Route path="/DanhSachGoiVe" element={<DanhSachGoiVe/>} />
         <Route path="/DoiSoatVe" element={<DoiSoatVe/>} />
     </Routes>

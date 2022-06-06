@@ -9,6 +9,7 @@ function DanhSachGoiVe(){
         window.scrollTo({ top: 0, behavior: "smooth" });
       }, []);
 
+
    return(
       
        <div className="LocVe">

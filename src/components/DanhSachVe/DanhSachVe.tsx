@@ -2,7 +2,7 @@ import React, {useEffect, useState } from "react";
 import "./index.css";
 import * as todo from "../../service/todo";
 import { SearchOutlined,FilterOutlined } from "@ant-design/icons";
-
+import { CSVLink } from "react-csv";
 
 function DanhSachVe(){
     useEffect(() => {
@@ -27,7 +27,7 @@ function DanhSachVe(){
      const fetchTodos = async () => {
         setTodos([]);
         const _todos = await todo.all();
-        // set state
+
         setTodos(_todos);
         const checkVe = document.getElementsByClassName('CheckTinhTrang');
         for ( let i = 0; i < checkVe.length; i++) {
@@ -47,7 +47,20 @@ function DanhSachVe(){
 
          
         }
-       
+        const headers =[
+            { label: "id", key: "id" },
+            { label: "BookingCode", key: "BookingCode" },
+            { label: "NgaySuDung", key: "NgaySuDung" },
+            { label: "NgayXuatVe", key: "NgayXuatVe" },
+            { label: "TinhTrang", key: "TinhTrang" },
+            { label: "CongCheckIn", key: "CongCheckIn" },
+         ]
+    
+         const cvreport = {
+            data: todos,
+            headers: headers,
+            filename: 'XuatVe.csv'
+         }
         
    return(
        
@@ -61,7 +74,7 @@ function DanhSachVe(){
                  </div> 
                     <div className="DanhSach-locVe">
                         <div className="DanhSach-locVe1"><button className="LocVe" onClick={ShowLocVe} ><FilterOutlined /> Lọc Vé</button></div>       
-                        <div className="DanhSach-locVe1"><button   className="XuatFile" > Xuất file(.csv)</button></div>
+                        <div className="DanhSach-locVe1"><CSVLink {...cvreport}  className="XuatFile" > Xuất file(.csv)</CSVLink></div>
                     </div>
                 </div>
                 
@@ -79,7 +92,13 @@ function DanhSachVe(){
                     </tr>
                 </thead>
                 <tbody>
+                {todos.length === 0 ? (
+                   <div className="container">
+                   <span className="loader"></span>
+                 </div>
+                ) : null}
                {todos.map((todos, index) => (
+                   
                    <tr>
                         <td className="cangiua">{index + 1}</td>
                         <td className="cantrai">{todos.BookingCode}</td>

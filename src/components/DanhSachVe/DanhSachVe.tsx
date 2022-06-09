@@ -35,7 +35,7 @@ function DanhSachVe(){
             {   
                 checkVe[i].classList.add("TinhTrang-dasudung");
             }
-            if(checkVe[i].innerHTML === "Chưa sử dụng")
+                if(checkVe[i].innerHTML === "Chưa sử dụng")
             {
                 checkVe[i].classList.add("TinhTrang-chuasudung");
             }

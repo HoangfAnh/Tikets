@@ -29,7 +29,7 @@ export const BangTrangChu = () => {
         },
         {
             "timePeriod": "CN",
-            "value": 1.5
+            "value": 3.5
         },
     
     ];

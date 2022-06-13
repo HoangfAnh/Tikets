@@ -3,10 +3,28 @@ h2{
   line-height: 54px;
 
 }
+/* LeVanThang */
+
+input[type="date"] {
+border-radius: 5px;
+padding: 5px;
+animation: animationAl 1s ease-in-out;
+}
+
+input[type="radio"] {
+animation: animationAl 1s ease-in-out;
+}
+
+input[type="time"] {
+border-radius: 5px;
+padding: 5px;
+animation: animationAl 1s ease-in-out;
+}
 
 h4{
   font-size: 18px;
   line-height: 28px;
+
 }
 .container{
 position: absolute;
@@ -52,11 +70,14 @@ animation-delay: .5s;
 }
 }
 
+
+
 .DanhSach{
   height: 87vh;
   border-radius: 24px;
   margin: 2vh 25px 46px 350px;
   background-color: white;
+  
 }
 
 .DanhSach .DanhSach-tk{
